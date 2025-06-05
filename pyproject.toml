@@ -1,0 +1,44 @@
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+skip-string-normalization = false
+
+[tool.ruff]
+# All rule sets you want
+select = [
+  "E",  # pycodestyle
+  "F",  # pyflakes
+  "I",  # isort
+  "B",  # flake8-bugbear
+  "S",  # flake8-bandit (partial bandit coverage)
+  "PL", # pylint
+  "UP", # pyupgrade
+  "C90",# mccabe complexity
+]
+ignore = [
+  "S101",  # Use of assert (common in tests)
+  "PLR2004", # Magic value comparison (can be noisy)
+]
+line-length = 88
+target-version = "py312"
+fix = true
+
+[tool.ruff.format]
+# Enable Ruff's own formatter (complements black)
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+docstring-code-format = true
+skip-magic-trailing-comma = false
+
+[tool.ruff.isort]
+known-first-party = ["your_package"]  # Replace with your actual package name
+combine-as-imports = true
+force-single-line = false
+
+[tool.ruff.lint.pylint]
+max-args = 6
+max-branches = 12
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends"]

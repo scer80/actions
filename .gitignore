@@ -1,0 +1,7 @@
+TODO.md
+pyproject.toml
+uv.lock
+
+docker/actions.docker-compose-*.yml
+
+*.pyc
