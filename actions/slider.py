@@ -1,4 +1,5 @@
-"""
+"""Marimo example notebook.
+
 marimo run actions/slider.py --host 0.0.0.0 --port 8500
 """
 
@@ -9,6 +10,7 @@ app = marimo.App()
 
 @app.cell
 def slider_cell():
+    """Create a slider widget cell for frequency control."""
     import marimo as mo
 
     frequency = mo.ui.slider(start=0.1, stop=10, label="Frequency", value=2.0)
@@ -17,6 +19,7 @@ def slider_cell():
 
 @app.cell
 def display_sine_wave(frequency):
+    """Display a sine wave plot in a cell."""
     import marimo as mo
     import matplotlib.pyplot as plt
     import numpy as np

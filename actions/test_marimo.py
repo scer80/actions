@@ -1,3 +1,5 @@
+"""Test marimo notebook functionality."""
+
 # import marimo as mo
 # import matplotlib.pyplot as plt
 
